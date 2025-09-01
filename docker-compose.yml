@@ -1,0 +1,11 @@
+services:
+  whisper:
+    build: ./whisper
+    container_name: whisper
+    restart: always
+    ports:
+      - "5001:8000"
+    environment:
+      - ASR_MODEL=base
+    networks:
+      - evolution-net
